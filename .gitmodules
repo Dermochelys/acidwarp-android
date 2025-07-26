@@ -1,0 +1,3 @@
+[submodule "android-project/app/jni/src"]
+	path = android-project/app/jni/src
+	url = git@github.com:Dermochelys/acidwarp.git

@@ -50,10 +50,12 @@ compile_commands.json
 *.pc
 test/*.test
 wayland-generated-protocols
+android-project/app/.cxx/
 
 # for CLion
-.idea
+.idea/**
 cmake-build-*
+android-project/.idea/**
 
 # for Xcode
 *.mode1*
@@ -176,3 +178,6 @@ test/torturethread
 docs/output
 SDL.tag
 doxygen_warn.txt
+
+# for Acidwarp
+android-project/app/jni/SDL
