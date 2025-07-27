@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace = "com.dermochelys.acidwarp"
+    compileSdkVersion 36
+    buildToolsVersion "36.0.0"
+
+    defaultConfig {
+        minSdkVersion 29
+        targetSdkVersion 36
+        versionCode 5
+        versionName "1.0.5-tv-only"
+        ndkVersion = "28.2.13676358"
+    }
+
+    externalNativeBuild {
+        cmake {
+            version "3.31.6"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        def capitalize = variant.name.capitalize()
+
+        tasks["merge${capitalize}Assets"]
+            .dependsOn("externalNativeBuild${capitalize}")
+    }
+
+    sourceSets.main {
+        jniLibs.srcDir 'libs'
+    }
+
+    externalNativeBuild {
+        cmake {
+            path 'jni/CMakeLists.txt'
+        }
+    }
+
+    lint {
+        abortOnError = false
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        prefab true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
+}
