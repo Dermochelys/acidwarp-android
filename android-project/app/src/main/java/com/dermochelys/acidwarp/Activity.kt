@@ -15,4 +15,9 @@ class Activity(): SDLActivity() {
         sendCommand(COMMAND_CHANGE_WINDOW_STYLE, 1)
         sendCommand(COMMAND_SET_KEEP_SCREEN_ON, 1)
     }
+
+    override fun onStop() {
+        super.onStop()
+        finish()
+    }
 }
