@@ -55,3 +55,6 @@ local.properties
 .kotlin/**
 .idea/**
 cmake-build-*
+
+release.jks
+keystore-info.txt

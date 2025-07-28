@@ -22,11 +22,11 @@ Most build dependencies are dynamically loaded, however, you must also ensure th
 -  It appears that there is some aspect ratio correction that can be done. The animations appear slightly "squished" when viewed on fullscreen on a 16:9 display. This also affects previous ports.
 
 ## Previous versions
-- See the [README.md](app/jni/src/README.md) inside the [submodule](app/jni/src).
+- See the [previous_ports](app/jni/src/previous_ports) folder inside the [submodule](app/jni/src).
 
 ## License
 
 As this is a descendent of Steven Will's `AcidWarp for Linux` which was GPL licensed, this too
 is and must also be GPL licensed.  See [gpl-3.0.md](gpl-3.0.md)
 
-![Acid Warp logo](app/src/main/logo.png)
+![Acid Warp logo](app/release/images/logo.png)

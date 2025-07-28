@@ -1,1 +1,0 @@
-app/jni/src/README_SDL.md
