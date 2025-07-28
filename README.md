@@ -1,7 +1,6 @@
-This is a temporary fork of https://github.com/libsdl-org/SDL as currently the
-their AAR based distribution is broken on X86 based devices (for example
-accelerated emulators).  I hope to solve that upstream and update this
-to a much simpler structure that uses their AAR based distribution.
+This is a fork of https://github.com/libsdl-org/SDL that avoids the 
+16kb page size warning currently present in the current (a/o 3.2.18) AAR 
+based distribution.
 
 For details about the Acid Warp for Android project, see the README at: 
 android-project/app/jni/src/README
